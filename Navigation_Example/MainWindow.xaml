@@ -1,0 +1,22 @@
+﻿<Window x:Class="Navigation_Example.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Navigation_Example"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="Beige">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame Grid.Row="1" x:Name="_mainFrame" />
+        <TextBlock Grid.Row="0" FontSize="30" TextAlignment="Center" VerticalAlignment="Center">Main Window</TextBlock>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Button Click="Button_Click" Margin="5" Padding="5,0" Grid.Row="1">Open with Instance</Button>
+            <Button Click="Button_Click_1" Margin="5" Padding="5,0" Grid.Row="2">Open using Navigation</Button>
+        </StackPanel>
+    </Grid>
+</Window>
